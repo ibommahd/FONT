@@ -1,0 +1,1058 @@
+
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="icon" type="image/ico" href="/favicon.png" sizes="200x200" />
+<title>
+   Fancy Text Generator | Fancy Fonts Generator - July, 2023   
+    </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="google-site-verification" content="A3CkEr3tkIF4wkibmHqoXJg22qAbj19lG_URZVgrqxI" />
+<meta property="og:image" content="/fancy-text-generator.png" />
+<link rel="stylesheet" type="text/css" href="/lib/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+<style>
+      html, body {
+        font-family: 'Merienda', cursive;
+        font-size:16px;
+        overflow-x: hidden; 
+      }
+      
+      .toast-top-right {
+          padding-top:70px;
+      }
+      
+       .fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%; z-index:9999; }
+     
+#button {
+  display: inline-block;
+  background-color: #2065d4;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 40px;
+  right: 5px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 35px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+      .sticky {
+  position: fixed;
+  top: -5px;
+  width:100%;
+  right:.1%;
+  left:.1%;
+}
+
+.fancy-font {
+    font-size:18px;
+    
+}
+
+.sidebar-wrapper, .sidebar-active, input, textarea {
+    
+}
+
+
+    </style>
+<style>
+  .shadow-box{
+      margin-top:10px;margin-right:0px;text-align:left; border: 1px solid;
+      padding: 15px;
+     -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+      margin-left:0px;
+      width:100%;
+      text-align:center;
+}
+ .shadow-box3{
+      margin-top:10px;margin-right:0px;text-align:left; border: 1px solid;
+      padding: 15px;
+     -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+      margin-left:0px;
+      width:100%;
+      text-align:center;
+}
+.shadow-box1{
+      margin-top:5px;margin-right:0px;text-align:left; border: 1px solid;
+      padding: 5px;
+     -webkit-box-shadow: 0 10px 6px -6px #777;
+     -moz-box-shadow: 0 10px 6px -6px #777;
+          box-shadow: 0 10px 6px -6px #777;
+      margin-left:0px;
+      width:100%;
+      text-align:center;
+}
+textarea {
+    text-align:center;
+}
+.video-zm {
+ transition: transform 0.5s;
+}
+.shadow-box:hover,.shadow-box3:hover {
+  
+  background:yellow;
+  cursor: pointer;
+}
+
+</style>
+<style>
+#info {
+    font-size: 20px;
+    }
+    #div_start {
+    float: right;
+    }
+    #headline {
+    text-decoration: none
+    }
+    #results {
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    min-height: 150px;
+    }
+    #start_button {
+    border: 0;
+    background-color:transparent;
+    padding: 0;
+    }
+    .interim {
+    color: gray;
+    }
+    .final {
+    color: black;
+    padding-right: 3px;
+    }
+    .button {
+    display: none;
+    }
+    .marquee {
+    margin: 20px auto;
+    }
+
+    #buttons {
+    margin: 10px 0;
+    position: relative;
+    top: -50px;
+    }
+
+    #copy {
+    margin-top: 20px;
+    }
+
+    #copy > div {
+    display: none;
+    margin: 0 70px;
+    }
+    </style>
+<style>
+a.c1 {font-weight: normal;}
+@media only screen and (max-width: 600px) {
+  .sidebar-wrapper {
+    display:none;
+  }
+  .sec-head-row {
+       display:none;
+  }
+}
+    </style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-68403745-3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-68403745-3');
+</script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6096362728138471",
+    enable_page_level_ads: false
+  });
+</script>
+</head>
+<style>
+    
+</style>
+<body>
+
+<a id="button"></a>
+<div>
+<header class="container-fuild header" style="text-shadow: 2px 2px 2px black;">
+<div class="container">
+<div class="flex align-items justify-content">
+<div class="logo">
+<a href="/" style="font-size:24px; color:#FFFFFF; font-weight:bold;">
+Fancy Fonts Generator</a>
+</div>
+<div class="menu xs-hide sm-hide" itemscope itemtype="https://schema.org/SiteNavigationElement">
+<ul>
+<li><a title="Home" itemprop="url" href="/">Home</a></li>
+<li><a title="Twitter Trends" itemprop="url" href="https://twitter-trends.iamrohit.in" target="_blank">Twitter Trends</a></li>
+<li><a title="Google Trends" itemprop="url" href="https://gtrends.iamrohit.in" target="_blank">Google Trends</a></li>
+<li><a title="Youtube Trends" itemprop="url" href="https://yt-trends.iamrohit.in" target="_blank">Youtube Trends</a></li>
+<li><a title="Age Calculator" itemprop="url" href="https://agecalculator.iamrohit.in" target="_blank">Age Calculator</a></li>
+</ul>
+</div>
+<div class="md-hide lg-hide">
+<div class="menu-btn">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
+</div>
+</div>
+</div>
+</header>
+</div>
+<div class="container">
+<div class="row">
+<div class="xs-12 md-12" itemscope itemtype="http://schema.org/Article">
+<div itemprop="articleBody">
+<div class="sec-head-row text-center">
+<div class="sec-head">
+<h1 class="page-title" itemprop="headline" style="text-shadow: 1px 2px 2px #2F536B;">FANCY FONTS GENERATOR</h1>
+</div>
+</div>
+<div class="description">
+<p> This is a simple online fancy fonts generator tool which helps you to generate some awesome fonts for your blog, website, bios etc just enter some text in the font generate box and bingo 1000's of awesome fancy fonts ready for copy paste.. </p>
+</div>
+<div class="row shadow-box1" style="background:#2f536b; color:#FFFFFF; z-index:99" id="fancy-text-box">
+<textarea class="form-control fancytext" placeholder="Type Text Here.." style="font-size:20px; height:60px;" rows="5"></textarea>
+</div>
+<div class="row  shadow-box" style="background:#fcf695">
+<span>Change Font Size: <input type="range" id="fancy-font-size" step="1" min="10" value="18" max="40" style="float:left">
+</span>
+</div>
+<div id="fancy-font-area">
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-9">
+<span id="cool-text-9" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-6">
+<span id="cool-text-6" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-14">
+<span id="cool-text-14" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-3">
+<span id="cool-text-3" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-18">
+<span id="cool-text-18" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-12">
+<span id="cool-text-12" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-13">
+<span id="cool-text-13" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-11">
+<span id="cool-text-11" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-8">
+<span id="cool-text-8" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-4">
+<span id="cool-text-4" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-16">
+<span id="cool-text-16" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-15">
+<span id="cool-text-15" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-7">
+<span id="cool-text-7" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-1">
+<span id="cool-text-1" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-17">
+<span id="cool-text-17" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-10">
+<span id="cool-text-10" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-2">
+<span id="cool-text-2" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#cool-text-5">
+<span id="cool-text-5" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-1">
+<span id="fancy-text-1" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-2">
+<span id="fancy-text-2" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-3">
+<span id="fancy-text-3" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-4">
+<span id="fancy-text-4" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-5">
+<span id="fancy-text-5" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-6">
+<span id="fancy-text-6" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-7">
+<span id="fancy-text-7" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-8">
+<span id="fancy-text-8" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-9">
+<span id="fancy-text-9" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-10">
+<span id="fancy-text-10" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-11">
+<span id="fancy-text-11" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-12">
+<span id="fancy-text-12" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-13">
+<span id="fancy-text-13" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-14">
+<span id="fancy-text-14" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-15">
+<span id="fancy-text-15" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-16">
+<span id="fancy-text-16" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-17">
+<span id="fancy-text-17" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-18">
+<span id="fancy-text-18" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-19">
+<span id="fancy-text-19" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-20">
+<span id="fancy-text-20" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-21">
+<span id="fancy-text-21" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-22">
+<span id="fancy-text-22" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-23">
+<span id="fancy-text-23" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-24">
+<span id="fancy-text-24" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-25">
+<span id="fancy-text-25" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-26">
+<span id="fancy-text-26" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-27">
+<span id="fancy-text-27" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-28">
+<span id="fancy-text-28" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-29">
+<span id="fancy-text-29" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-30">
+<span id="fancy-text-30" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-31">
+<span id="fancy-text-31" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-32">
+<span id="fancy-text-32" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-33">
+<span id="fancy-text-33" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-34">
+<span id="fancy-text-34" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-35">
+<span id="fancy-text-35" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-36">
+<span id="fancy-text-36" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-37">
+<span id="fancy-text-37" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-38">
+<span id="fancy-text-38" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-39">
+<span id="fancy-text-39" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-40">
+<span id="fancy-text-40" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-41">
+<span id="fancy-text-41" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-42">
+<span id="fancy-text-42" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-43">
+<span id="fancy-text-43" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-44">
+<span id="fancy-text-44" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-45">
+<span id="fancy-text-45" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-46">
+<span id="fancy-text-46" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-47">
+<span id="fancy-text-47" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-48">
+<span id="fancy-text-48" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-49">
+<span id="fancy-text-49" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-50">
+<span id="fancy-text-50" title="Click to copy">Fancy Fonts Generator</span></div>
+<center style="margin-top: 8px;">
+<ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6096362728138471" data-ad-slot="9965759129" data-ad-format="auto" data-full-width-responsive="true">
+</ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</center>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-51">
+<span id="fancy-text-51" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-52">
+<span id="fancy-text-52" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-53">
+<span id="fancy-text-53" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-54">
+<span id="fancy-text-54" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-55">
+<span id="fancy-text-55" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-56">
+<span id="fancy-text-56" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-57">
+<span id="fancy-text-57" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-58">
+<span id="fancy-text-58" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-59">
+<span id="fancy-text-59" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-60">
+<span id="fancy-text-60" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-61">
+<span id="fancy-text-61" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-62">
+<span id="fancy-text-62" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-63">
+<span id="fancy-text-63" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-64">
+<span id="fancy-text-64" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-65">
+<span id="fancy-text-65" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-66">
+<span id="fancy-text-66" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-67">
+<span id="fancy-text-67" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-68">
+<span id="fancy-text-68" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-69">
+<span id="fancy-text-69" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-70">
+<span id="fancy-text-70" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-71">
+<span id="fancy-text-71" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-72">
+<span id="fancy-text-72" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-73">
+<span id="fancy-text-73" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-74">
+<span id="fancy-text-74" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-75">
+<span id="fancy-text-75" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-76">
+<span id="fancy-text-76" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-77">
+<span id="fancy-text-77" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-78">
+<span id="fancy-text-78" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-79">
+<span id="fancy-text-79" title="Click to copy">Fancy Fonts Generator</span></div>
+<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-80">
+<span id="fancy-text-80" title="Click to copy">Fancy Fonts Generator</span></div>
+</div>
+<center style="margin-top:10px;">
+<button class="btn btn-primary loadmore" style="font-size:25px;"><b>Load More..</b></button>
+</center>
+</div>
+<hr/>
+<div class="text-center">
+<div class="sec-head">
+<h1 class="page-title" itemprop="headline" style="text-shadow: 1px 2px 2px #2F536B;">Popular Fancy Names - Jul 2023</h1>
+</div>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-0">
+<span id="fancy-name-0">▄︻̷̿┻̿═━一 ʜᴇᴀᴅsʜᴏᴛ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-1">
+<span id="fancy-name-1">『sʜʀᴋ』•ᴮᴬᴰʙᴏʏツ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-2">
+<span id="fancy-name-2">꧁༒ᏃᏋᏌᎦ༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-3">
+<span id="fancy-name-3">꧁༒𝕱𝖎𝖌𝖍𝖙𝖊𝖗🅜༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-4">
+<span id="fancy-name-4">尺ムGE๛HITMAN</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-5">
+<span id="fancy-name-5">🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-6">
+<span id="fancy-name-6">━━╬٨ـﮩﮩ❤٨ـﮩﮩـ╬━❤️❥❥═══Emon ══</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-7">
+<span id="fancy-name-7">Psycho killer</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-8">
+<span id="fancy-name-8">☬♥༒࿇ℍℰᗅℛᝨ Kⅈℒℒℰℛ ☬♥༒࿇</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-9">
+<span id="fancy-name-9">Sᴋ᭄Sᴀʙɪʀᴮᴼˢˢ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-10">
+<span id="fancy-name-10">♡⋆DADA_BHAI⋆♡</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-11">
+<span id="fancy-name-11">☯︎༆✯꧁𝔹𝔸ℙ✯🇰 🇴 ✯𝕭𝖍𝖊𝕵꧂𓇽</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-12">
+<span id="fancy-name-12">乡ŁION 乡Name</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-13">
+<span id="fancy-name-13">🅱🅰🅰🅿☠🅺🅾☬ 🅱🅷🅴🅹</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-14">
+<span id="fancy-name-14">༺Leͥgeͣnͫd༻ᴳᵒᵈ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-15">
+<span id="fancy-name-15">٨ـﮩ.𝘽𝙍𝙊𝙆𝙀𝙉 ٨ـ💔ﮩﮩـ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-16">
+<span id="fancy-name-16">꧁༒Sa̶d̶B∆Y༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-17">
+<span id="fancy-name-17">Call Me Legend ¥T</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-18">
+<span id="fancy-name-18">꧁༒☬sunny☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-19">
+<span id="fancy-name-19">𝒄𝒓𝒂𝒛𝒛𝒚 𝒌𝒊𝒍𝒍𝒆𝒓</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-20">
+<span id="fancy-name-20">★彡Dҽɑժʍɑղ☠</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-21">
+<span id="fancy-name-21">SK ᭄✮𝓐𝓼𝓱𝓸𝓴࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-22">
+<span id="fancy-name-22">࿐●⃝ᶫᵒꪜe☯『ᴮᴼᵞ』Ɍønɨ᭄●₄₂₀</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-23">
+<span id="fancy-name-23">꧁༺Łùćïfêř༻꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-24">
+<span id="fancy-name-24">꧁༒☬ŠCØŔPĨØŊ☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-25">
+<span id="fancy-name-25">━╤デ╦︻☬ Lapani ☆☬✰ Man ☬▄︻̷̿┻̿</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-26">
+<span id="fancy-name-26">°꧁༒AldyyExtece༒꧂°</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-27">
+<span id="fancy-name-27">꧁༺₦༏₦ℑ₳༻꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-28">
+<span id="fancy-name-28">༄bᵈ᭄✿ s a d i k ࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-29">
+<span id="fancy-name-29">ＯＰܔ R e h a n ★࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-30">
+<span id="fancy-name-30">꧁༒♛King ♛༒꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-31">
+<span id="fancy-name-31">꧁℠⎳𝓸𝓿𝓮❥❤️☆࿐꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-32">
+<span id="fancy-name-32">━╤デ╦︻☬DE$TRØyER☆☬✰DEViL☬▄︻̷̿┻̿</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-33">
+<span id="fancy-name-33">Sᴋ᭄Sᴀʙɪʀᴮᴼˢˢ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-34">
+<span id="fancy-name-34">『GM』WaRdenLF</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-35">
+<span id="fancy-name-35">ᴾʳᵒ ᭄തങ്കു ✰࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-36">
+<span id="fancy-name-36">꧁༒☬๖ۣۜǤнσsτ༻๖ۣۜℜideℝ ☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-37">
+<span id="fancy-name-37">꧁༒☬₣ℜøźєη•₣ℓα₥єֆ☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-38">
+<span id="fancy-name-38">꧁༒ÅŞÄŠŞÏŅŞBŁĂČĶ༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-39">
+<span id="fancy-name-39">꧁Êž~ᴵᴰLeͥgeͣnͫd☬꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-40">
+<span id="fancy-name-40">ᎧᎮܔᏞᴇԍᴇɴᴅ☯࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-41">
+<span id="fancy-name-41">꧁ ㄎひマ尺乞爪乞 ꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-42">
+<span id="fancy-name-42">𝔤𝔥𝔬𝔰𝔱kíllєr</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-43">
+<span id="fancy-name-43">꧁ঔৣ☬✞𝓓𝖔𝖓✞☬ঔৣ꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-44">
+<span id="fancy-name-44">ツﻬஐﻬ •ĂŤĚŇĂ• ﻬஐﻬツ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-45">
+<span id="fancy-name-45">ঔৣ✞ⓢⓔⓑⓐⓢ✞ঔৣ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-46">
+<span id="fancy-name-46">[PUBG]多SHROUD</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-47">
+<span id="fancy-name-47">🖤🆈🅾🆄n̶ͣo̶ͬt̶ͤ Đᴇͭᴀͦᴅᵐᵉ💀</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-48">
+<span id="fancy-name-48">━━╬٨ـﮩﮩ❤٨ـﮩﮩـ╬━❤️❥❥═══👑ľøvē👑 ═ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-49">
+<span id="fancy-name-49">꧁༒☬Bad☬Boy☬༒꧂꧁༒☬ 𝖙𝖍𝖆𝖐𝖚𝖗-</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-50">
+<span id="fancy-name-50">☯ᎡＯᏦ༏★ᴮᴼˢˢ᭄™</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-51">
+<span id="fancy-name-51">꧁༒☬丹ᤢྀᤢྀ刀ᤢྀDᤢྀ尺ᤢྀ乇ᤢྀ丂ᤢྀ☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-52">
+<span id="fancy-name-52">Ｓㄚ 么 乙 ツ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-53">
+<span id="fancy-name-53">☬༆ℬᎥℑ۝Ɣ༒℣₳ł༆☬</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-54">
+<span id="fancy-name-54">𝐀 𝐗 𝐄</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-55">
+<span id="fancy-name-55">சாமி சரணம்</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-56">
+<span id="fancy-name-56">꧁▪ÐɑʀҟƑîʀɛ☆꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-57">
+<span id="fancy-name-57">ㄗ丂丫亡卄〇</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-58">
+<span id="fancy-name-58">IήsͥA͜͡ nͣeͫ°</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-59">
+<span id="fancy-name-59">Iήsͥⱥnͣeͫ°</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-60">
+<span id="fancy-name-60">꧁ঔৣ☬✞HUNTER✞☬ঔৣ꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-61">
+<span id="fancy-name-61">Ꮆѧмԑ╰‿╯ᎧᏙᎬᎡ !!!</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-62">
+<span id="fancy-name-62">SkULL༒CruSHeR</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-63">
+<span id="fancy-name-63">꧁༒☬sunny☬༒꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-64">
+<span id="fancy-name-64">☠《NOOB》☠</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-65">
+<span id="fancy-name-65">™Ꭰᥲʀκ͢☢Ӄᴎ͟͞ɪ͟͞ԍ͟͞ʜ͟͞ᴛ]™ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-66">
+<span id="fancy-name-66">༒ȡένίĻཧᜰ꙰ꦿ➢(your name)</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-67">
+<span id="fancy-name-67">⚡Tekⱥshi⚡</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-68">
+<span id="fancy-name-68">乂•ᴾᴿᴼ❥ＮꢺᏦ ❥•꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-69">
+<span id="fancy-name-69">TBS๛「lEMz」ツ乛</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-70">
+<span id="fancy-name-70">ཧᜰ꙰ꦿ➢₦Ї₦ℑ₳ ༒ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-71">
+<span id="fancy-name-71">꧁༒♛King ♛༒꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-72">
+<span id="fancy-name-72">🇲𝗼𝗺ـــ٨ﮩﮩ❤️ﮩﮩ٨ـــ🇩𝗮𝗱</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-73">
+<span id="fancy-name-73">ĐàŔkツ๛【MANO】</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-74">
+<span id="fancy-name-74">MVG•Ｎム丂ㄒㄚ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-75">
+<span id="fancy-name-75">亗『LEGEND』亗</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-76">
+<span id="fancy-name-76">༒S P Y Đ Ê R༒</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-77">
+<span id="fancy-name-77">SOUL々MORTAL</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-78">
+<span id="fancy-name-78">꧁༒Ǥ₳₦ǤֆƬᏋЯ༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-79">
+<span id="fancy-name-79">๖ۣۜⲦʀⲑⷱ͜ⲭⷮɪⲛ༻࿌𖣘</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-80">
+<span id="fancy-name-80">꧁༒•B□Y•ℓєgєи∂༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-81">
+<span id="fancy-name-81">ιи¢яє∂ιвℓє</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-82">
+<span id="fancy-name-82">꧁℠⎳𝓸𝓿𝓮❥❤️☆࿐꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-83">
+<span id="fancy-name-83">ツTiger♰YourNameツ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-84">
+<span id="fancy-name-84">ཧᜰ꙰ꦿ➢₦Ї₦ℑ₳ ༒ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-85">
+<span id="fancy-name-85">꧁༺Leͥgeͣnͫd༻ᴳᵒᵈ꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-86">
+<span id="fancy-name-86">㊙H̶a̶c̶k̶e̶r̶一</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-87">
+<span id="fancy-name-87">I love mohammad ❤</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-88">
+<span id="fancy-name-88">✹₳ⱤɆ₴₮₳₦₮✹</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-89">
+<span id="fancy-name-89">꧁༒☬Ⓐʙⓘⓝᴬⓢⓗ☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-90">
+<span id="fancy-name-90">『ˢᴷ』 • Ҟ モ れ 乙 Ö ࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-91">
+<span id="fancy-name-91">꧁℠⎳𝓸𝓿𝓮❥❤️☆࿐꧂ </span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-92">
+<span id="fancy-name-92">ᴀҡ᭄ᴀʙʜɪᴮᴼˢˢ࿐</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-93">
+<span id="fancy-name-93">Sᴋ᭄Sᴀʙɪʀᴮᴼˢˢ</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-94">
+<span id="fancy-name-94">🇭 🇺 .🇳 .🇹 .🇪 🇷</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-95">
+<span id="fancy-name-95">꧁༒☬M̷O̷N̷S̷T̷E̷R̷☬༒꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-96">
+<span id="fancy-name-96">нυηт🦋αүεsнα🇳🇵</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-97">
+<span id="fancy-name-97">SΞΝSΛ1D</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-98">
+<span id="fancy-name-98">♔〘Ł€Ǥ€ŇĐ Heяø</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-99">
+<span id="fancy-name-99">꧁༺J꙰O꙰K꙰E꙰R꙰༻꧂</span>
+</div>
+<div class="row shadow-box3 fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-name-100">
+<span id="fancy-name-100">❣︎ 𝐇 𝐀 𝐊 𝐀 𝐑 Aɴɪᴋᴇᴛ ❣︎</span>
+</div>
+<div style="margin-top:40px;"></div>
+</div>
+</div>
+</div>
+<footer class="container-fluid footer">
+<div class="container" itemscope itemtype="https://schema.org/WPFooter">
+<div class="row">
+<div class="xs-12" style="text-align:center;color:#ffffff">
+<h1>Fancy Fonts Generator</h1>
+<p>Fancy Fonts Generator is a free online tool to generate cool and stylish text, This tool also has one click copy and paste feature to share generated fancy fonts anywhere you want.</p>
+<p>Fancy Fonts Generator tool help you to convert your simple plain text into stylish fancy text letters that you can copy and paste to use anywhere you want. The fancy text generators make a set of symbols and special characters from the unicode symbols. These symbols are supported by almost all popular web browsers and social media platforms.</p>
+<p>You can easily generate your fancy style text / font and copy paste formatted text into Facebook, Twitter, WhatsApp, Instagram and any other social media profile names, bio text, posts, forums or comments. Make your text or profile name more catchy, special and noticeable with cool fancy text.</p>
+<p>These fancy fonts pefectaly works on many popular social platform like Instagram, Facebook, Twitter, Twitch, YouTube, Tumblr, Reddit, Tiktok, Whatsapp and most other places on the internet.</p>
+<p>
+<a href="/fonts-for-instagram"><span class="badge">Fonts for Instagram</span></a>
+<a href="/fonts-for-twitter"><span class="badge">Fonts for Twitter</span></a>
+<a href="/fonts-for-youtube"><span class="badge">Fonts for Youtube</span></a>
+<a href="/fonts-for-facebook"><span class="badge">Fonts for Facebook</span></a>
+<a href="/fonts-for-tumblr"><span class="badge">Fonts for Tumblr</span></a>
+<a href="/fancy-name-generator"><span class="badge">Fancy Name Generator</span></a>
+<a href="/cool-text-generator"><span class="badge">Cool Text Generator</span></a>
+<a href="/freefire-fonts-generator"><span class="badge">FreeFire Fonts Generator</span></a>
+<a href="/pubg-fonts-generator"><span class="badge">Pubg Fonts Generator</span></a>
+<a href="/stylish-name-maker"><span class="badge">Stylish Name Maker</span></a>
+<a href="/fonts-changer"><span class="badge">Fonts Changer</span></a>
+<a href="/fancy-bio-generator"><span class="badge">Fancy Bio Generator</span></a>
+<a href="/minecraft-fonts-generator"><span class="badge">Minecraft Fonts Generator</span></a>
+<a href="/fonts-converter"><span class="badge">Fonts Converter</span></a>
+<a href="/fortnite-name-generator"><span class="badge">Fortnite Name Generator</span></a>
+<a href="/game-tags-generator"><span class="badge">Fancy Game Tags Generator</span></a>
+<a href="/fonts-for-whatsapp"><span class="badge">Fonts for Whatsapp</span></a>
+<a href="/fonts-for-tiktok"><span class="badge">Fonts for TikTok</span></a>
+<a href="/games-username-generator"><span class="badge">Fancy Games Username Generator</span></a>
+<a href="/fancy-letter-generator"><span class="badge">Fancy Letter Generator</span></a>
+<a href="/fancy-text-symbols-generator"><span class="badge">Fancy Text Symbols Generator</span></a>
+<a href="/twitch-fonts-generator"><span class="badge">Twitch Fonts Generator</span></a>
+<a href="/cool-instagram-bio-maker"><span class="badge">Cool Instagram Bio Maker</span></a>
+<a href="/stylish-text-generator"><span class="badge">Stylish Text Generator</span></a>
+<a href="/fifa-stylish-name-maker"><span class="badge">Fifa Stylish Name Maker</span></a>
+<a href="/call-of-duty-stylish-name-generator"><span class="badge">Call of Duty Stylish Name Generator</span></a>
+<a href="/gaming-name-generator"><span class="badge">Fancy Gaming Name Generator</span></a>
+<a href="/xbox-gamertag-generator"><span class="badge">Cool Xbox Gamertag Generator</span></a>
+<a href="/discord-fonts-generator"><span class="badge">Discord Fonts Generator</span></a>
+<a href="/logo-fonts-generator"><span class="badge">Fancy Fonts for Logo</span></a>
+<a href="/aesthetic-fonts-generator"><span class="badge">Aesthetic Fonts Generator</span></a>
+<a href="/linkedin-fonts-generator"><span class="badge">Linkedin Fonts Generator</span></a>
+<a href="/unicode-fonts-generator"><span class="badge">Unicode Fonts Generator</span></a>
+<a href="/grand-theft-auto-fancy-name-generator"><span class="badge">Grand Theft Auto Fancy Name Generator</span></a>
+<a href="/roblox-fancy-name-generator"><span class="badge">Roblox Fancy Name Generator</span></a>
+<a href="/crossfire-name-generator"><span class="badge">CrossFire Name Generator</span></a>
+<a href="/among-us-fancy-name-generator"><span class="badge">Among Us Fancy Name Generator</span></a>
+<a href="/world-of-tanks-fancy-name-generator"><span class="badge">World of Tanks Fancy name Generator</span></a>
+<a href="/world-of-warcraft-fancy-name-generator"><span class="badge">World of Warcraft Fancy Name Generator</span></a>
+<a href="/dota-fancy-name-generator"><span class="badge">Dota2 Fancy Name Generator</span></a>
+<a href="/wifi-name-generator"><span class="badge">Fancy WI-FI Name Generator</span></a>
+<a href="/fancy-nick-name-generator"><span class="badge">Fancy Nick Name Generator - NickFinder </span></a>
+<hr/>
+<p> © 2023 Fancy Fonts Generator</p>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="/lib/clipboard.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("search-tools");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("tool-conversion-menu");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display="";
+        } else {
+            li[i].style.display="none";
+			
+        }
+    }
+}
+
+
+
+jQuery(document).ready(function(){
+	//jQuery('#donate_btn').hide();
+	jQuery(".menu-btn").click(function(){
+		jQuery(".menu").slideToggle();
+	});
+	jQuery(".sidebar-active").click(function(){
+		jQuery(".search-tools-wrap").slideToggle();
+	});
+	jQuery(document).on('click', '.sidebar-active.down', function(){
+		jQuery(".sidebar-active").removeClass("down");
+		jQuery(".sidebar-active").addClass("up");
+	});
+	jQuery(document).on('click', '.sidebar-active.up', function(){
+		jQuery(".sidebar-active").removeClass("up");
+		jQuery(".sidebar-active").addClass("down");
+	});
+});
+
+</script>
+<script src="/lib/fancy-font-v1.js" type="text/javascript"></script>
+<script>
+
+$(function(){
+    
+    var clipboard = new ClipboardJS('.shadow-box');
+    clipboard.on('success', function(e) {
+        //console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        //console.log(e);
+    });
+    
+  $(".fancytext").keyup(function() { 
+   var txt = $.trim($(this).val());
+   if (typeof(Storage) !== "undefined") {
+      localStorage.setItem("txt", txt);
+   }
+   if(txt!='') { 
+   generateFancy(txt);
+   generateCoolTxt(txt);
+   } else {
+   generateFancy("Fancy Fonts Generator");
+   generateCoolTxt("Fancy Fonts Generator");
+   }
+ });
+ 
+ 
+ 
+ 
+var _0xc4d4=["\uFE3D","\x6A\x6F\x69\x6E","","\x73\x70\x6C\x69\x74","\x68\x74\x6D\x6C","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31","\u301C","\u223F","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x32","\uFF90","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x33","\u22B6","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x34","\u2746","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x35","\x28\u261D\u25DE\u2038\u25DF\x29\u261E\x20","\x20\u261C\x28\x60\x6F\xB4\x29","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x36","\x28\u25C9\u203F\u25C9\x29\x20","\x20\x28\u25C9\x20\u203F\u25C9\x29","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x37","\x28\uFF61\u2665\u203F\u2665\uFF61\x29\x20","\x20\x28\uFF61\u2665\u203F\u2665\uFF61\x29","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x38","\u266B\u266A\u2669\xB7\x2E\xB8\xB8\x2E\xB7\u2669\u266A\u266B\x20","\x20\u266B\u266A\u2669\xB7\x2E\xB8\xB8\x2E\xB7\u2669\u266A\u266B","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x39","\u258C\u2502\u2588\u2551\u258C\u2551\u258C\u2551\x20","\x20\u2551\u258C\u2551\u258C\u2551\u2588\u2502\u258C","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x30","\u0DF4\u2764\uFE0F\u0DF4\x20\u0DF4\u2764\uFE0F\u0DF4","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x31","\u30DF\uD83D\uDC96\x20","\x20\uD83D\uDC96\u5F61","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x32","\u2570\u2022\u2605\u2605","\u2605\u2605\u2022\u256F","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x33","\u2A33","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x34","\u2660","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x35","\u2663","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x36","\u27B8","\u27B9","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x37","\u27B7","\x23\x63\x6F\x6F\x6C\x2D\x74\x65\x78\x74\x2D\x31\x38"];function generateCoolTxt(_0xb1c9x2){$(_0xc4d4[5])[_0xc4d4[4]](_0xc4d4[0]+ _0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[0])+ _0xc4d4[0]);$(_0xc4d4[8])[_0xc4d4[4]](_0xc4d4[6]+ _0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[7])+ _0xc4d4[6]);$(_0xc4d4[10])[_0xc4d4[4]](_0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[9]));$(_0xc4d4[12])[_0xc4d4[4]](_0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[11]));$(_0xc4d4[14])[_0xc4d4[4]](_0xc4d4[13]+ _0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[13])+ _0xc4d4[13]);$(_0xc4d4[17])[_0xc4d4[4]](_0xc4d4[15]+ _0xb1c9x2+ _0xc4d4[16]);$(_0xc4d4[20])[_0xc4d4[4]](_0xc4d4[18]+ _0xb1c9x2+ _0xc4d4[19]);$(_0xc4d4[23])[_0xc4d4[4]](_0xc4d4[21]+ _0xb1c9x2+ _0xc4d4[22]);$(_0xc4d4[26])[_0xc4d4[4]](_0xc4d4[24]+ _0xb1c9x2+ _0xc4d4[25]);$(_0xc4d4[29])[_0xc4d4[4]](_0xc4d4[27]+ _0xb1c9x2+ _0xc4d4[28]);$(_0xc4d4[31])[_0xc4d4[4]](_0xc4d4[30]+ _0xb1c9x2+ _0xc4d4[30]);$(_0xc4d4[34])[_0xc4d4[4]](_0xc4d4[32]+ _0xb1c9x2+ _0xc4d4[33]);$(_0xc4d4[37])[_0xc4d4[4]](_0xc4d4[35]+ _0xb1c9x2+ _0xc4d4[36]);$(_0xc4d4[39])[_0xc4d4[4]](_0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[38]));$(_0xc4d4[41])[_0xc4d4[4]](_0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[40]));$(_0xc4d4[43])[_0xc4d4[4]](_0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[42]));$(_0xc4d4[46])[_0xc4d4[4]](_0xc4d4[44]+ _0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[45])+ _0xc4d4[44]);$(_0xc4d4[48])[_0xc4d4[4]](_0xc4d4[44]+ _0xb1c9x2[_0xc4d4[3]](_0xc4d4[2])[_0xc4d4[1]](_0xc4d4[47])+ _0xc4d4[44])}
+
+ $(document).on("click",".fancy-font", function(){
+     toastr.options.closeButton = true;
+     toastr.options.progressBar = true;
+     toastr.options.positionClass = 'toast-top-right';
+     toastr.remove();
+     toastr.success($(this).text(),'BINGO.. Text Copied',{timeOut: 2000});
+ });
+ 
+ // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the header
+var header = document.getElementById("fancy-text-box");
+
+// Get the offset position of the navbar
+var sticky = header.offsetTop;
+sticky = sticky + 100;
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+    //$(".fancy-text-area").removeClass(".fn");
+  }
+}
+
+ 
+ var ct=81;
+ var _0x2609=['49549yneLdc','1126jWyprO','1rBtHtG','793HbHAPS','908AtvgDq','391bGTFqL','location','878CYJMov','756669KgBsJM','37075biBFQy','769MlvVmq','5IYUuFp','https://fancy-fonts.iamrohit.in','origin','78222yzSuwN','58oOZxUD'];var _0x28cf=function(_0xcdb3db,_0x4495a8){_0xcdb3db=_0xcdb3db-0x1ee;var _0x2609f4=_0x2609[_0xcdb3db];return _0x2609f4;};var _0x57fa94=_0x28cf;(function(_0x2036cb,_0xc8b07b){var _0x2e46a2=_0x28cf;while(!![]){try{var _0x59c5a3=parseInt(_0x2e46a2(0x1f8))*-parseInt(_0x2e46a2(0x1fd))+-parseInt(_0x2e46a2(0x1fb))+parseInt(_0x2e46a2(0x1ef))*-parseInt(_0x2e46a2(0x1f5))+parseInt(_0x2e46a2(0x1f4))*parseInt(_0x2e46a2(0x1f7))+-parseInt(_0x2e46a2(0x1f0))*parseInt(_0x2e46a2(0x1f1))+-parseInt(_0x2e46a2(0x1ee))*parseInt(_0x2e46a2(0x1f2))+parseInt(_0x2e46a2(0x1f6))*parseInt(_0x2e46a2(0x1fc));if(_0x59c5a3===_0xc8b07b)break;else _0x2036cb['push'](_0x2036cb['shift']());}catch(_0x307968){_0x2036cb['push'](_0x2036cb['shift']());}}}(_0x2609,0x8e3ba));var hostname=window[_0x57fa94(0x1f3)][_0x57fa94(0x1fa)];if(hostname=='http://fancy-fonts.iamrohit.in'||hostname==_0x57fa94(0x1f9)){}else alert('You\x20are\x20using\x20copyrighted\x20version\x20of\x20this\x20tool;\x20Original\x20URL:\x20https://fancy-fonts.iamrohit.in');
+ function generateFancy(txt) {
+  var fancyText = '';
+     var result = forward(txt);
+         var finalRes =  result.split('\n\n');
+         var sn=1;
+        $.each(finalRes,function(inx, vl) { 
+            $("#fancy-text-"+inx).html(vl);
+          sn++;
+        });
+        
+        for(k=81; k<=ct; k++) {
+            //console.log(k);
+            $("#fancy-text-"+k).html(crazyWithFlourishOrSymbols(txt));
+        }
+}
+
+var txt = "Fancy Fonts Generator";
+ if (typeof(Storage) !== "undefined") {
+      var txtStg = localStorage.getItem("txt");
+      $(".fancytext").val(txtStg);
+      if(txtStg) {
+          txt = txtStg;
+          
+      }
+   }
+generateFancy(txt);
+generateCoolTxt(txt);
+
+$(".loadmore").click(function(){
+   $(this).html('Loading...');
+    var text = $.trim($(".fancytext").val());
+   if(text=='') {
+     text = "Fancy Fonts Generator";
+   } 
+   var that = $(this);
+   var intvl = setInterval(function(){  that.html('Load More..');clearInterval(intvl); }, 1000);
+   for(var i=1;i<=10;i++){
+    fancyText  =  '<div class="row  shadow-box fancy-font" data-clipboard-action="copy" data-clipboard-target="#fancy-text-'+ct+'"><span id="fancy-text-'+ct+'">'+crazyWithFlourishOrSymbols(text)+'</span></div>';
+      ct++;
+    $("#fancy-font-area").append(fancyText);
+    }
+ });
+ 
+ $("#fancy-font-size").on("input", function() {
+     $(".fancy-font").css("font-size",$(this).val()+"px");
+ });
+ 
+ 
+ var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+
+
+    
+});
+
+</script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56bf2c1af6048441"></script>
+</body></html>
